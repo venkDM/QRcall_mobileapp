@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122234726727",
+    "project_id": "qrinnovations-d0b5c",
+    "storage_bucket": "qrinnovations-d0b5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122234726727:android:6ccbc67c86d65d0f484462",
+        "android_client_info": {
+          "package_name": "com.qr.innovation.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUwI4_oIZpBUkD7cm1Cshz4bYWL_wLl8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

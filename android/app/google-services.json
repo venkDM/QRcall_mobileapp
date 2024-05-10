@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "122234726727",
-    "project_id": "qrinnovations-d0b5c",
-    "storage_bucket": "qrinnovations-d0b5c.appspot.com"
+    "project_number": "993022371246",
+    "project_id": "qrcode4you-5e90d",
+    "storage_bucket": "qrcode4you-5e90d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:122234726727:android:6ccbc67c86d65d0f484462",
+        "mobilesdk_app_id": "1:993022371246:android:3b0be06bab90eaeda2143f",
         "android_client_info": {
-          "package_name": "com.qr.innovation.app"
+          "package_name": "com.qrcode4you.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCUwI4_oIZpBUkD7cm1Cshz4bYWL_wLl8s"
+          "current_key": "AIzaSyAq0z-UpvcJ8FVSPwN1shErEXdCA_JWr_o"
         }
       ],
       "services": {

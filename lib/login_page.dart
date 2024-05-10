@@ -70,52 +70,37 @@ class _LoginPageState extends ConsumerState<LoginPage> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 174, 242, 243),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            logo(),
-            SizedBox(
-              height: MediaQuery.of(context).size.height / 2,
-              child: Container(
-                decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 174, 242, 243),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      userIDEditor(),
-                      const SizedBox(height: 10),
-                      passwordEditor(),
-                      const SizedBox(height: 25),
-                      signInButton(),
-                      const SizedBox(height: 20),
-                      // line1(),
-                      forgotpassword(),
-                    ],
-                  ),
+        child: Padding(
+          padding: const EdgeInsets.all(15),
+          child: Column(
+            children: [
+              const SizedBox(height: 10),
+              logo(),
+              Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    userIDEditor(),
+                    const SizedBox(height: 10),
+                    passwordEditor(),
+                    const SizedBox(height: 25),
+                    signInButton(),
+                    const SizedBox(height: 20),
+                    forgotpassword(),
+                  ],
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget logo() {
-    return Center(
-      child: Image.asset(
-        'assets/QRcode4you.png',
-        height: MediaQuery.of(context).size.height / 2,
-        width: MediaQuery.of(context).size.width,
-      ),
+    return Image.asset(
+      'assets/QRcode4you.png',
+      height: MediaQuery.of(context).size.height / 2,
     );
   }
 

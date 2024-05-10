@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -9,7 +7,7 @@ class AppIdVersion {
 
   static String iosId = 'com.qr.innovation.app.ios';
 
-  static String version = 'v 1.0.3';
+  static String version = 'v 1.0.12';
 }
 
 class Api {

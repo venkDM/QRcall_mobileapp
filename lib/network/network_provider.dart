@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qr_innovations/network/network_state.dart';
@@ -15,7 +16,10 @@ class NetworkProvider extends StateNotifier<NetworkState> {
 
   void subscribe() {
     subscription = Connectivity().onConnectivityChanged.listen((result) {
-      state = state.copyWith(connectivityResult: result);
-    });
+      final connectivityResult = result.isNotEmpty ? result.first : null;
+      if (connectivityResult != null) {
+        state = state.copyWith(connectivityResult: connectivityResult);
+      }
+    }) as StreamSubscription<ConnectivityResult>?;
   }
 }

@@ -1,6 +1,6 @@
 // Flutter imports:
 // ignore_for_file: unnecessary_import, unused_local_variable, always_use_package_imports, lines_longer_than_80_chars, use_super_parameters, use_string_buffers, unnecessary_new, unnecessary_lambdas, use_build_context_synchronously
-import 'package:faker/faker.dart';
+import 'package:faker/faker.dart' as Faker;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,7 +18,6 @@ import 'package:qr_innovations/login_page.dart';
 import 'package:qr_innovations/login_service.dart';
 import 'package:qr_innovations/riverpod/profile_state.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 // Package imports:
 import 'package:zego_uikit/zego_uikit.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
@@ -160,7 +159,8 @@ class _HomePageState extends ConsumerState<HomePage> {
           child: ref.watch(profileProvider).loading
               ? const Center(
                   child:
-                      CircularProgressIndicators.primaryColorProgressIndication)
+                      CircularProgressIndicators.primaryColorProgressIndication,
+                )
               : Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -203,8 +203,10 @@ class _HomePageState extends ConsumerState<HomePage> {
                             style: TextStyles.noColorNoSizeFontStyle,
                           ),
                           const SizedBox(height: 20),
-                          const Text('Email ID',
-                              style: TextStyles.titleFontStyle),
+                          const Text(
+                            'Email ID',
+                            style: TextStyles.titleFontStyle,
+                          ),
                           const SizedBox(height: 5),
                           Text(
                             '${provider.userDetails?.userEmail}',
@@ -291,8 +293,8 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 
   Widget userListView() {
-    final random = RandomGenerator();
-    final faker = Faker();
+    final random = Faker.RandomGenerator();
+    final faker = Faker.Faker();
 
     return Center(
       child: ListView.builder(

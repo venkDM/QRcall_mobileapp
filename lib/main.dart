@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:qr_innovations/api_token_services/api_tokens.dart';
-
 // Package imports:
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zego_uikit_prebuilt_call/zego_uikit_prebuilt_call.dart';
@@ -73,13 +72,11 @@ class MyAppState extends State<MyApp> {
           Token.token == '' ? PageRouteNames.login : PageRouteNames.home,
       routes: routes,
       theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFEFEFEF)),
-
       navigatorKey: widget.navigatorKey,
       builder: (BuildContext context, Widget? child) {
         return Stack(
           children: [
             child!,
-
             ZegoUIKitPrebuiltCallMiniOverlayPage(
               contextQuery: () {
                 return widget.navigatorKey.currentState!.context;

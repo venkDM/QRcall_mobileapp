@@ -22,7 +22,7 @@
         tools:node="remove" />
 
     <application
-        android:label="QR CALL"
+        android:label="MyQR KNOCK"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

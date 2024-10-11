@@ -1,6 +1,7 @@
 // ignore_for_file: always_use_package_imports, use_super_parameters, avoid_redundant_argument_values, unawaited_futures, lines_longer_than_80_chars, eol_at_end_of_file, inference_failure_on_function_invocation, unnecessary_lambdas, omit_local_variable_types
 import 'dart:developer';
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -38,10 +39,10 @@ class _LoginPageState extends ConsumerState<LoginPage> {
   void initializeNotifications() {
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('@mipmap/ic_launcher');
-    const InitializationSettings initializationSettings =
-        InitializationSettings(
+    InitializationSettings initializationSettings = InitializationSettings(
       android: initializationSettingsAndroid,
-      iOS: IOSInitializationSettings(),
+      // ios settings gets removed due to upgrade
+      // iOS: IOSInitializationSettings(),
     );
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
   }
